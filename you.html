@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>TEK INSOMNIA</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/animat-3.7.0.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-4.7.0.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-4.1.3.min.css">
+    <link rel="stylesheet" href="assets/css/owl-carousel.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/linearicons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body>
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Header Area Starts -->
+    <header class="header-area">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 d-md-flex">
+                        <h6 class="mr-3"><span class="mr-2"><i class="fa fa-mobile"></i></span> call us now!+62 823-8728-5494</h6>
+                        <h6 class="mr-3"><span class="mr-2"><i class="fa fa-envelope-o"></i></span> Proyekindependen50@gmail.com</h6>
+                        <h6><span class="mr-2"><i class="fa fa-map-marker"></i></span> STIKes Payung Negeri</h6>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="social-links">
+                            <ul>
+                                <li><a href="https://youtube.com/@nadilahputrisani2122?si=mkl6yNJEEGsnpqU9"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://youtube.com/@nadilahputrisani2122?si=mkl6yNJEEGsnpqU9 "><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/indpenden.20?igshid=MmVlMjlkMTBhMg%3D%3D&utm_source=qr "><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="header" id="home">
+            <div class="container">
+                <div class="row align-items-center justify-content-between d-flex">
+                <div id="logo">
+                    <a href="index.html"><img src="assets/images/logo/logo.png" alt="" title="" /></a>
+                </div>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li class="menu-active"><a href="index.html">Home</a></li>
+                        <li><a href="departments.html"> Kesehatan mental</a></li>
+                        <li><a href="you.html">Masalah Medis</a></li>
+                        <li class="menu-has-children"><a href="">Pages</a>
+                          <ul>
+                            <li><a href="about.html">about us</a></li>
+                            <li><a href="elements.html">Login/sign up</a></li>
+                          </ul>
+                        </li>
+                        
+                        <li><a href="contact.html">Contact</a></li>			          				          
+                    </ul>
+                </nav><!-- #nav-menu-container -->		    		
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Banner Area Starts -->
+    <section class="banner-area other-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Masalah medis </h1>
+                    <a href="index.html">Home</a> <span>|</span> <a href="departments.html">Departments</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="patient-area section-padding">
+       
+            <style>
+              button.clicked {
+                background-color: blue;
+                color: white;
+              }
+              body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+              }
+              
+              .container {
+                width: 100%;
+                margin: 0 auto;
+              }
+              
+              h2 {
+                margin-top: 0;
+              }
+              
+              label {
+                display: block;
+                margin-bottom: 5px;
+              }
+              
+              input[type="text"],
+              input[type="number"],
+              select {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+              }
+              section {
+              margin-top: 20px; /* Atur margin atas */
+              margin-bottom: 20px; /* Atur margin bawah */
+            }
+            /* Gaya untuk tombol "Lanjutkan Tes" */
+            button {
+              padding: 9px 10px;
+              background-color: #3498db;
+              border: none;
+              color: white;
+              border-radius: 4px;
+              cursor: pointer;
+            
+              transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
+            }
+            
+            button:hover {
+              background-color: #2980b9;
+            }
+            .jenisKelaminDropdown {
+  width: 100%;
+  padding: 1px;
+  margin-bottom: 23px; /* Atur jarak antara dropdown dan tombol */
+  border: 1px solid; /* Menambahkan jenis border */
+  border-radius: 4px;
+  line-height: 1.5; /* Menyesuaikan line-height */
+}
+
+              
+              #kuesioner {
+                display: none;
+              }
+              
+              /* Gaya untuk checkbox */
+             
+              
+              /* Gaya untuk hasil tes */
+              #hasil {
+                text-align: center;
+                margin-top: 20px;
+              }
+              
+              #skor {
+                font-size: 24px;
+                font-weight: bold;
+              }
+              
+              /* Tambahan: Animasi untuk elemen saat muncul */
+              @keyframes fadeIn {
+                from {
+                  opacity: 0;
+                }
+                to {
+                  opacity: 1;
+                }
+              }
+              
+              .fadeIn {
+                animation: fadeIn 0.5s ease-in-out;
+              }
+              /* CSS untuk hasil tes */
+            #hasil {
+                display: none;
+                text-align: center;
+                margin-top: 20px;
+              }
+              
+              #hasil h2 {
+                margin-bottom: 10px;
+              }
+              
+              #hasilData {
+                margin-bottom: 20px;
+                text-align: left; /* Justifikasi data pengguna ke kiri */
+              }
+              
+              #hasilData p {
+                margin-bottom: 8px;
+              }
+              
+              #hasilData p span {
+                font-weight: bold;
+              }
+              
+              #skor {
+                font-weight: bold;
+              }
+              
+              #keterangan {
+                text-align: justify; /* Justifikasi teks keterangan */
+              }
+              fieldset fieldset {
+                  display: none;
+                }
+                /* Add margin-bottom to the Jenis Kelamin dropdown */
+           
+
+
+            
+            </style>
+            <div class="container">
+              <div id="biodataForm">
+                <h2>Masukkan Biodata</h2>
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama">
+                <label for="umur">Umur:</label>
+                <input type="number" id="umur">
+                <label for="jenisKelamin">Jenis Kelamin:</label>
+                <label>
+                  <input type="radio" name="jenisKelamin" value="perempuan" class="khususJenisKelamin"> Perempuan
+                </label>
+                <label>
+                  <input type="radio" name="jenisKelamin" value="laki-laki" class="khususJenisKelamin"> Laki-laki
+                </label>
+                <button onclick="lanjutkanTes()">Lanjutkan Tes</button>
+              </div>
+            </div>
+            
+                <div id="kuesioner" style="display: none;">
+                  <h2>Kuesioner FAM E-HEALTH SCREENING</h2>
+                  <form id="quizForm">
+                    <!-- Pertanyaan 1 -->
+                    <div id="pertanyaan1">
+                      <p>Pertanyaan 1:	Apakah dalam beberapa hari ini anda mengalami kesulitan tidur? </p>
+                      <label>
+                        <input type="checkbox" id="p1Ya" onclick="jawab('p1', 'ya')"> Benar
+                      </label>
+                      <label>
+                        <input type="checkbox" id="p1Tidak" onclick="jawab('p1', 'tidak')"> Salah
+                      </label>
+                    </div>
+                    <div id="pertanyaan2">
+                      <p>Pertanyaan 2:	Apakah dalam beberapa bulan ini anda mengalami kesulitan tidur?</p>
+                      <label>
+                        <input type="checkbox" id="p2Ya" onclick="jawab('p2', 'ya')"> Benar
+                      </label>
+                      <label>
+                        <input type="checkbox" id="p2Tidak" onclick="jawab('p2', 'tidak')"> Salah
+                      </label>
+                    </div>
+            
+                    <!-- enambahkan pertanyaan-pertanyaan lainnya secara serupa hingga pertanyaan kelima -->
+                    <div id="pertanyaan3">
+                      <p>Pertanyaan 3:	Apakah anda sulit tidur kembali jika terbangun dari tidur anda? </p>
+                      <label>
+                        <input type="checkbox" id="p3Ya" onclick="jawab('p3', 'ya')"> Benar
+                      </label>
+                      <label>
+                        <input type="checkbox" id="p3Tidak" onclick="jawab('p3', 'tidak')"> Salah
+                      </label>
+                    </div>
+                    
+                    <div id="pertanyaan4">
+                      <p>Pertanyaan 4: Apakah anda mengonsumsi Alkohol? </p>
+                      <label>
+                        <input type="checkbox" id="p4Ya" onclick="jawab('p4', 'ya')"> Benar
+                      </label>
+                      <label>
+                        <input type="checkbox" id="p4Tidak" onclick="jawab('p4', 'tidak')"> Salah
+                      </label>
+                    </div>
+                    
+                    <div id="pertanyaan5">
+                      <p>Pertanyaan 5: Apakah anda Perokok?  </p>
+                      <label>
+                        <input type="checkbox" id="p5Ya" onclick="jawab('p5', 'ya')"> Benar
+                      </label>
+                      <label>
+                        <input type="checkbox" id="p5Tidak" onclick="jawab('p5', 'tidak')"> Salah
+                      </label>
+                    </div>
+            
+                    <div id="pertanyaan6">
+                      <p>Pertanyaan 6:	Apakah anda mengalami sesak nafas?  </p>
+                      <label>
+                        <input type="checkbox" id="p6Ya" onclick="jawab('p6', 'ya')"> Benar
+                      </label>
+                      <label>
+                        <input type="checkbox" id="p6Tidak" onclick="jawab('p6', 'tidak')"> Salah
+                      </label>
+                    </div>
+              <div id="pertanyaan7">
+                      <p>Pertanyaan 7:	Apakah anda mengalami beberapa keluhan medis pada diri anda?  </p>
+                      <label>
+                        <input type="checkbox" id="p7Ya" onclick="jawab('p7', 'ya')"> Benar
+                      </label>
+                      <label>
+                        <input type="checkbox" id="p7Tidak" onclick="jawab('p7', 'tidak')"> Salah
+                      </label>
+                    </div>
+                    <div id="pertanyaan8">
+                      <p>Pertanyaan 8: 	h.	Apakah anda sedang mengalami kesakitan?  </p>
+                      <label>
+                        <input type="checkbox" id="p8Ya" onclick="jawab('p8', 'ya')"> Benar
+                      </label>
+                        <input type="checkbox" id="p8Tidak" onclick="jawab('p8', 'tidak')"> Salah
+                      </label>
+                    </div>
+                    <div id="pertanyaan9">
+                      <p>Pertanyaan 9: Apakah saat ini anda memiliki beban pikiran?</p>
+                      <label>
+                        <input type="checkbox" id="p9Ya" onclick="jawab('p9', 'ya')"> Benar
+                      </label>
+                        <input type="checkbox" id="p9Tidak" onclick="jawab('p9', 'tidak')"> Salah
+                      </label>
+                    </div>
+                    <d
+                   
+                    <!-- Lanjutan pertanyaan lainnya -->
+                    <!-- ... -->
+                    <button type="button" onclick="hitungSkor()">Submit</button>
+                  </form>
+                </div>
+                <div id="hasil" style="display: none;">
+                    <h2>Hasil Tes</h2>
+                    <div id="hasilData">
+                    <p>Nama: <span id="hasilNama"></span></p>
+                    <p>Umur: <span id="hasilUmur"></span></p>
+                    <p>Jenis Kelamin: <span id="hasilJenisKelamin"></span></p>
+                    <p>Skor: <span id="skor"></span>%</p>
+                    <p id="keterangan"></p>
+                  </div>
+              </div>
+              
+              <script>
+                let biodata = {}; // Deklarasikan biodata sebagai variabel global
+                let skor = 0; // Deklarasikan skor sebagai variabel global
+              
+                function lanjutkanTes() {
+                  const nama = document.getElementById('nama').value;
+                  const umur = document.getElementById('umur').value;
+              
+                  const jenisKelaminElement = document.querySelector('input[name="jenisKelamin"]:checked');
+                  const jenisKelamin = jenisKelaminElement ? jenisKelaminElement.value : '';
+              
+                  biodata = {
+                    nama,
+                    umur,
+                    jenisKelamin
+                  };
+              
+                  document.getElementById('biodataForm').style.display = 'none';
+                  document.getElementById('kuesioner').style.display = 'block';
+                }
+            function jawab(pertanyaan, jawaban) {
+              if (pertanyaan === 'p1') {
+                const yaChecked = document.getElementById('p1Ya').checked;
+                const tidakChecked = document.getElementById('p1Tidak').checked;
+            
+                if (yaChecked) {
+                  skor += 20;
+                } else if (tidakChecked) {
+                  skor += 0;
+                }
+                // Lanjutkan dengan pertanyaan lainnya dan penilaian skor
+              } else if (pertanyaan === 'p2') {
+                const yaChecked = document.getElementById('p2Ya').checked;
+                const tidakChecked = document.getElementById('p2Tidak').checked;
+            
+                if (yaChecked) {
+                  skor += 20;
+                } else if (tidakChecked) {
+                  skor += 0;
+                }
+                // Lanjutkan dengan pertanyaan lainnya dan penilaian skor
+              } else if (pertanyaan === 'p3') {
+                const yaChecked = document.getElementById('p3Ya').checked;
+                const tidakChecked = document.getElementById('p3Tidak').checked;
+            
+                if (yaChecked) {
+                  skor += 10;
+                } else if (tidakChecked) {
+                  skor += 0;
+                }
+                // Lanjutkan dengan pertanyaan lainnya dan penilaian skor
+              } else if (pertanyaan === 'p4') {
+                const yaChecked = document.getElementById('p4Ya').checked;
+                const tidakChecked = document.getElementById('p4Tidak').checked;
+            
+                if (yaChecked) {
+                  skor += 5;
+                } else if (tidakChecked) {
+                  skor += 0;
+                }
+                // Lanjutkan dengan pertanyaan lainnya dan penilaian skor
+              } else if (pertanyaan === 'p5') {
+                const yaChecked = document.getElementById('p5Ya').checked;
+                const tidakChecked = document.getElementById('p5Tidak').checked;
+            
+                if (yaChecked) {
+                  skor += 10;
+                } else if (tidakChecked) {
+                  skor +=0;
+                }
+              } else if (pertanyaan === 'p6') {
+                const yaChecked = document.getElementById('p6Ya').checked;
+                const tidakChecked = document.getElementById('p6Tidak').checked;
+            
+                if (yaChecked) {
+                  skor += 10;
+                } else if (tidakChecked) {
+                  skor +=0;
+                }
+              } else if (pertanyaan === 'p7') {
+                const yaChecked = document.getElementById('p7Ya').checked;
+                const tidakChecked = document.getElementById('p7Tidak').checked;
+            
+                if (yaChecked) {
+                  skor += 10;
+                } else if (tidakChecked) {
+                  skor +=0;
+                }
+              } else if (pertanyaan === 'p8') {
+                const yaChecked = document.getElementById('p8Ya').checked;
+                const tidakChecked = document.getElementById('p8Tidak').checked;
+            
+                if (yaChecked) {
+                  skor += 10;
+                } else if (tidakChecked) {
+                  skor +=0;
+                }
+              } else if (pertanyaan === 'p9') {
+                const yaChecked = document.getElementById('p9Ya').checked;
+                const tidakChecked = document.getElementById('p9Tidak').checked;
+            
+                if (yaChecked) {
+                  skor += 5;
+                } else if (tidakChecked) {
+                  skor +=0;
+                }
+            
+                // Lanjutkan dengan pertanyaan lainnya dan penilaian skor
+              }
+            }
+            
+            function hitungSkor() {
+    document.getElementById('hasilNama').innerText = biodata.nama;
+    document.getElementById('hasilUmur').innerText = biodata.umur;
+    document.getElementById('hasilJenisKelamin').innerText = biodata.jenisKelamin;
+
+    skor = Math.min(skor, 100);
+             
+            
+              document.getElementById('hasilNama').innerText = biodata.nama;
+              document.getElementById('hasilUmur').innerText = biodata.umur;
+              document.getElementById('hasilJenisKelamin').innerText = biodata.jenisKelamin;
+            
+              document.getElementById('skor').innerText = skor.toFixed(2);
+            
+              const keteranganElem = document.getElementById('keterangan');
+              let keterangan = '';
+              
+              if (skor >= 76) {
+  keterangan = 'Hasil dari pertanyaan menunjukkan kemungkinan terjadinya insomnia kronis.';
+  keterangan += 'Fokus utama dari pengobatan adalah identifikasi faktor penyebab.';
+  keterangan += 'Setelah faktor penyebab teridentifikasi, penting untuk mengontrol dan mengelola masalah yang mendasarinya.';
+  keterangan += 'Sleep hygiene adalah komponen terapi perilaku untuk insomnia. Langkah-langkah termasuk mencuci muka, sikat gigi, buang air kecil sebelum tidur, tidur sebanyak yang dibutuhkan, berolahraga secara rutin, idealnya 4-5 jam sebelum tidur.';
+  keterangan += 'Hindari memaksa diri untuk tidur, serta hindari caffeine, alkohol, dan nikotin 6 jam sebelum tidur. Juga, hindari kegiatan lain yang tidak ada kaitannya dengan tidur kecuali hanya untuk sex dan tidur.';
+  keterangan += 'Relaxation therapy meliputi relaksasi otot progresif, latihan pernafasan dalam, serta meditasi. Ini membantu mengenali dan mengendalikan ketegangan dengan melakukan serangkaian latihan, termasuk menghirup dan menghembuskan nafas secara perlahan-lahan.';
+} else {
+  keterangan = 'Jika Anda sudah dalam fase INSOMNIA kronis, disarankan untuk berkonsultasi dengan Psikiater untuk penanganan lebih lanjut. Namun, hal yang dapat Anda lakukan menjelang konsultasi dengan psikiater/psikolog adalah penggunaan obat tidur, ini hanya bersifat sementara dan bukan untuk mengatasi insomnia sepenuhnya. Terapi pengobatan insomnia diklasifikasikan menjadi tiga jenis: Benzodiazepin, Nonbenzodiazepin - hipnotik, dan obat lain yang dapat memberikan efek tertidur.';
+}
+
+
+
+
+            
+            
+            
+              keteranganElem.innerText = keterangan;
+            
+            
+              document.getElementById('kuesioner').style.display = 'none';
+              document.getElementById('hasil').style.display = 'block';
+            }
+            function getJenisKelamin() {
+  const jenisKelaminRadios = document.getElementsByName('jenisKelamin');
+  let selectedValue = '';
+
+  for (const radio of jenisKelaminRadios) {
+    if (radio.checked) {
+      selectedValue = radio.value;
+      break;
+    }
+  }
+
+  console.log(selectedValue);
+  // Lakukan sesuatu dengan nilai jenis kelamin yang terpilih
+}
+              </script>
+            
+
+    
+<script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+<script src="assets/js/vendor/bootstrap-4.1.3.min.js"></script>
+  <script src="assets/js/vendor/wow.min.js"></script>
+  <script src="assets/js/vendor/owl-carousel.min.js"></script>
+  <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
+  <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
+  <script src="assets/js/vendor/superfish.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+
+
+</body>
+</html>
