@@ -107,8 +107,16 @@
       body {
         font-family: Arial, sans-serif;
         margin: 0;
-        padding: 0;
+        padding: 23;
       }
+      .pertanyaan {
+    padding: 15px; /* Menambahkan padding 15px pada semua sisi elemen dengan kelas "pertanyaan" */
+}
+div[id^="pertanyaan"] {
+    padding: 25px; /* Memberikan padding ke semua elemen yang memiliki ID yang dimulai dengan "pertanyaan" */
+    margin-bottom: 20px; /* Memberikan margin di bagian bawah setiap elemen pertanyaan */
+}
+
 
       .container {
         width: 100%;
@@ -142,21 +150,31 @@
       }
 
       /* Gaya untuk tombol "Lanjutkan Tes" */
-      button {
-        padding: 9px 10px;
-        background-color: #3498db;
-        border: none;
-        color: white;
-        border-radius: 4px;
-        cursor: pointer;
+     /* CSS untuk pertanyaan */
+.pertanyaan {
+  padding: 15px; /* Menambahkan padding 15px pada semua sisi elemen dengan kelas "pertanyaan" */
+  margin-bottom: 20px; /* Memberikan margin di bagian bawah setiap elemen pertanyaan */
+}
 
-        transition: background-color 0.3s ease;
-        /* Animasi perubahan warna latar belakang */
-      }
+/* Untuk elemen dengan ID yang dimulai dengan "pertanyaan" */
 
-      button:hover {
-        background-color: #2980b9;
-      }
+
+/* Rapikan padding pada tombol "Lanjutkan Tes" */
+button {
+  padding: 9px 10px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* Animasi perubahan warna latar belakang */
+}
+
+button:hover {
+  background-color: #2980b9;
+  padding: 9px 10px; /* Kembalikan padding ke nilai semula saat tombol dihover */
+}
 
       .jenisKelaminDropdown {
         width: 100%;
@@ -173,6 +191,8 @@
 
       #kuesioner {
         display: none;
+        padding: 13px;
+       
       }
 
       /* Gaya untuk checkbox */
@@ -180,8 +200,10 @@
 
       /* Gaya untuk hasil tes */
       #hasil {
-        text-align: center;
-        margin-top: 20px;
+        display: none;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
       }
 
       #skor {
@@ -199,48 +221,63 @@
           opacity: 1;
         }
       }
-
+    
       .fadeIn {
         animation: fadeIn 0.5s ease-in-out;
       }
 
       /* CSS untuk hasil tes */
       #hasil {
-        display: none;
-        text-align: center;
-        margin-top: 20px;
-      }
+  display: none;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  padding: 4px; /* Tambahkan satuan px */
+}
 
-      #hasil h2 {
-        margin-bottom: 10px;
-      }
+#hasil h2 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 4px; /* Tambahkan satuan px */
+}
 
-      #hasilData {
-        margin-bottom: 20px;
-        text-align: left;
-        /* Justifikasi data pengguna ke kiri */
-      }
+#hasilData {
+  margin-bottom: 2px;
+  text-align: left;
+  margin-top: 1px;
+  margin: 3;
+  padding: 33px; /* Tambahkan satuan px */
+  /* Justifikasi data pengguna ke kiri */
+}
 
-      #hasilData p {
-        margin-bottom: 8px;
-      }
+#hasilData p {
+  margin-bottom: 2px;
+  padding: 3px; /* Tambahkan satuan px */
+}
 
-      #hasilData p span {
-        font-weight: bold;
-      }
+#hasilData p span {
+  font-weight: bold;
+  padding: 4px; /* Tambahkan satuan px */
+}
 
-      #skor {
-        font-weight: bold;
-      }
+#skor {
+  font-weight: bold;
+  padding: 4px; /* Tambahkan satuan px */
+}
 
-      #keterangan {
-        text-align: justify;
-        /* Justifikasi teks keterangan */
-      }
+#keterangan {
+  text-align: justify;
+  padding: 4px; /* Tambahkan satuan px */
+  /* Justifikasi teks keterangan */
+}
+
 
       fieldset fieldset {
         display: none;
       }
+      button[type="button"] {
+  padding: 10px 30px; /* Sesuaikan nilai padding sesuai kebutuhan Anda */
+}
 
       /* Add margin-bottom to the Jenis Kelamin dropdown */
     </style>
@@ -317,7 +354,7 @@
         </div>
 
         <div id="pertanyaan6">
-          <p>Pertanyaan 6: Apakah saat ini anda memiliki beban pikiran? </p>
+          <p>Pertanyaan 6:	Apakah anda sedang ada masalah dengan orang disekitar anda?  </p>
           <label>
             <input type="checkbox" id="p6Ya" onclick="jawab('p6', 'ya')"> Benar
           </label>
@@ -493,7 +530,7 @@
 
         const keteranganElem = document.getElementById('keterangan');
         let keterangan = '';
-
+        let rekomendasi = '';
         if (skor >= 50) {
           keterangan = 'Hasil dari pertanyaan menunjukkan kemungkinan terjadinya insomnia akut.';
           keterangan += 'Fokus utama dari pengobatan adalah identifikasi faktor penyebab.';
@@ -502,9 +539,19 @@
           keterangan += 'Hindari memaksa diri untuk tidur, serta hindari caffeine, alkohol, dan nikotin 6 jam sebelum tidur. Juga, hindari kegiatan lain yang tidak ada kaitannya dengan tidur kecuali hanya untuk sex dan tidur.';
           keterangan += 'Relaxation therapy meliputi relaksasi otot progresif, latihan pernafasan dalam, serta meditasi. Ini membantu mengenali dan mengendalikan ketegangan dengan melakukan serangkaian latihan, termasuk menghirup dan menghembuskan nafas secara perlahan-lahan.';
         } else {
-          keterangan = 'Berdasarkan tingkat pemahaman Anda, dapat disimpulkan bahwa Anda tidak mengalami insomnia akut.';
-        }
+    keterangan = 'Berdasarkan tingkat pemahaman Anda, dapat disimpulkan bahwa Anda tidak mengalami insomnia akut.';
+    rekomendasi = `Berdasarkan diagnosa yang telah didapatkan, Anda tidak mengalami INSOMNIA. Namun beberapa hal yang dapat Anda lakukan untuk mencegah penyakit INSOMNIA di antaranya:<br>
+    1. Tentukan waktu tidur Anda<br>
+    2. Hindari menggunakan smartphone, tablet, televisi, atau layar LCD lainnya sebelum tidur.<br>
+    3. Hindari konsumsi kafein, alkohol, dan nikotin.<br>
+    4. Olahraga secara teratur.<br>
+    5. Lakukan rutinitas santai sebelum tidur, seperti membaca buku, mendengarkan musik, atau mandi.<br>
+    6. Buatlah kamar tidur Anda senyaman mungkin.<br>
+    Semoga Membantu :)`;
+  }
 
+  // Menampilkan pesan rekomendasi
+  
 
 
 
@@ -512,7 +559,7 @@
 
         keteranganElem.innerText = keterangan;
 
-
+        document.getElementById('keterangan').innerHTML = rekomendasi;
         document.getElementById('kuesioner').style.display = 'none';
         document.getElementById('hasil').style.display = 'block';
       }
