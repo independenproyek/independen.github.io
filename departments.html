@@ -300,7 +300,7 @@ button:hover {
     </div>
 
     <div id="kuesioner" style="display: none;">
-      <h2>Kuesioner FAM E-HEALTH SCREENING</h2>
+      <h2>Kuesioner Insomnia</h2>
       <form id="quizForm">
         <!-- Pertanyaan 1 -->
         <div id="pertanyaan1">
@@ -527,42 +527,38 @@ button:hover {
         document.getElementById('hasilJenisKelamin').innerText = biodata.jenisKelamin;
 
         document.getElementById('skor').innerText = skor.toFixed(2);
-
         const keteranganElem = document.getElementById('keterangan');
+       
         let keterangan = '';
-        let rekomendasi = '';
-        if (skor >= 50) {
-          keterangan = 'Hasil dari pertanyaan menunjukkan kemungkinan terjadinya insomnia akut.';
-          keterangan += 'Fokus utama dari pengobatan adalah identifikasi faktor penyebab.';
-          keterangan += 'Setelah faktor penyebab teridentifikasi, penting untuk mengontrol dan mengelola masalah yang mendasarinya.';
-          keterangan += 'Sleep hygiene adalah komponen terapi perilaku untuk insomnia. Langkah-langkah termasuk mencuci muka, sikat gigi, buang air kecil sebelum tidur, tidur sebanyak yang dibutuhkan, berolahraga secara rutin, idealnya 4-5 jam sebelum tidur.';
-          keterangan += 'Hindari memaksa diri untuk tidur, serta hindari caffeine, alkohol, dan nikotin 6 jam sebelum tidur. Juga, hindari kegiatan lain yang tidak ada kaitannya dengan tidur kecuali hanya untuk sex dan tidur.';
-          keterangan += 'Relaxation therapy meliputi relaksasi otot progresif, latihan pernafasan dalam, serta meditasi. Ini membantu mengenali dan mengendalikan ketegangan dengan melakukan serangkaian latihan, termasuk menghirup dan menghembuskan nafas secara perlahan-lahan.';
-        } else {
-    keterangan = 'Berdasarkan tingkat pemahaman Anda, dapat disimpulkan bahwa Anda tidak mengalami insomnia akut.';
-    rekomendasi = `Berdasarkan diagnosa yang telah didapatkan, Anda tidak mengalami INSOMNIA. Namun beberapa hal yang dapat Anda lakukan untuk mencegah penyakit INSOMNIA di antaranya:<br>
-    1. Tentukan waktu tidur Anda<br>
-    2. Hindari menggunakan smartphone, tablet, televisi, atau layar LCD lainnya sebelum tidur.<br>
-    3. Hindari konsumsi kafein, alkohol, dan nikotin.<br>
-    4. Olahraga secara teratur.<br>
-    5. Lakukan rutinitas santai sebelum tidur, seperti membaca buku, mendengarkan musik, atau mandi.<br>
-    6. Buatlah kamar tidur Anda senyaman mungkin.<br>
-    Semoga Membantu :)`;
-  }
 
-  // Menampilkan pesan rekomendasi
-  
+if (skor >= 50) {
+  keterangan = 'Hasil dari pertanyaan menunjukkan kemungkinan terjadinya insomnia akut. ';
+  keterangan += 'Fokus utama dari pengobatan adalah identifikasi faktor penyebab. ';
+  keterangan += 'Setelah faktor penyebab teridentifikasi, penting untuk mengontrol dan mengelola masalah yang mendasarinya. ';
+  keterangan += 'Sleep hygiene adalah komponen terapi perilaku untuk insomnia. Langkah-langkah termasuk mencuci muka, sikat gigi, buang air kecil sebelum tidur, tidur sebanyak yang dibutuhkan, berolahraga secara rutin, idealnya 4-5 jam sebelum tidur. ';
+  keterangan += 'Hindari memaksa diri untuk tidur, serta hindari caffeine, alkohol, dan nikotin 6 jam sebelum tidur. Juga, hindari kegiatan lain yang tidak ada kaitannya dengan tidur kecuali hanya untuk sex dan tidur. ';
+  keterangan += 'Relaxation therapy meliputi relaksasi otot progresif, latihan pernafasan dalam, serta meditasi. Ini membantu mengenali dan mengendalikan ketegangan dengan melakukan serangkaian latihan, termasuk menghirup dan menghembuskan nafas secara perlahan-lahan.';
+} else {
+keterangan += '<p>Berdasarkan diagnosa yang telah didapatkan, Anda tidak mengalami INSOMNIA AKUT. Namun beberapa hal yang dapat Anda lakukan untuk mencegah penyakit INSOMNIA di antaranya:</p>';
+keterangan += '<ol>'; // Menggunakan tag <ol> (Ordered List) agar urutannya berdasarkan angka
+keterangan += '<li>Tentukan waktu tidur Anda</li>';
+keterangan += '<li>Hindari menggunakan smartphone, tablet, televisi, atau layar LCD lainnya sebelum tidur.</li>';
+keterangan += '<li>Hindari konsumsi kafein, alkohol, dan nikotin.</li>';
+keterangan += '<li>Olahraga secara teratur.</li>';
+keterangan += '<li>Lakukan rutinitas santai sebelum tidur, seperti membaca buku, mendengarkan musik, atau mandi.</li>';
+keterangan += '<li>Buatlah kamar tidur Anda senyaman mungkin.</li>';
+keterangan += '</ol>'; // Tutup tag <ol>
+keterangan += '<p>Semoga Membantu :)</p>';
+}
 
 
+keteranganElem.innerHTML = keterangan;
 
+document.getElementById('kuesioner').style.display = 'none';
+document.getElementById('hasil').style.display = 'block';
 
+            }
 
-        keteranganElem.innerText = keterangan;
-
-        document.getElementById('keterangan').innerHTML = rekomendasi;
-        document.getElementById('kuesioner').style.display = 'none';
-        document.getElementById('hasil').style.display = 'block';
-      }
       function getJenisKelamin() {
         const jenisKelaminRadios = document.getElementsByName('jenisKelamin');
         let selectedValue = '';

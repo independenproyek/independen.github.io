@@ -93,102 +93,136 @@
     <section class="patient-area section-padding">
        
             <style>
-              button.clicked {
-                background-color: blue;
-                color: white;
-              }
-              body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-              }
-              
-              .container {
-                width: 100%;
-                margin: 0 auto;
-              }
-              
-              h2 {
-                margin-top: 0;
-              }
-              
-              label {
-                display: block;
-                margin-bottom: 5px;
-              }
-              
-              input[type="text"],
-              input[type="number"],
-              select {
-                width: 100%;
-                padding: 10px;
-                margin-bottom: 15px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-              }
-              section {
-              margin-top: 20px; /* Atur margin atas */
-              margin-bottom: 20px; /* Atur margin bawah */
-            }
-            /* Gaya untuk tombol "Lanjutkan Tes" */
-            button {
-              padding: 9px 10px;
-              background-color: #3498db;
-              border: none;
-              color: white;
-              border-radius: 4px;
-              cursor: pointer;
-            
-              transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
-            }
-            
-            button:hover {
-              background-color: #2980b9;
-            }
-            .jenisKelaminDropdown {
-  width: 100%;
-  padding: 1px;
-  margin-bottom: 23px; /* Atur jarak antara dropdown dan tombol */
-  border: 1px solid; /* Menambahkan jenis border */
-  border-radius: 4px;
-  line-height: 1.5; /* Menyesuaikan line-height */
+ 
+      button.clicked {
+        background-color: blue;
+        color: white;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 23;
+      }
+      .pertanyaan {
+    padding: 15px; /* Menambahkan padding 15px pada semua sisi elemen dengan kelas "pertanyaan" */
+}
+div[id^="pertanyaan"] {
+    padding: 25px; /* Memberikan padding ke semua elemen yang memiliki ID yang dimulai dengan "pertanyaan" */
+    margin-bottom: 20px; /* Memberikan margin di bagian bawah setiap elemen pertanyaan */
 }
 
-              
-#kuesioner {
-        display: none;
-        padding: 20px;
-        margin: 23px;
+
+      .container {
+        width: 100%;
+        margin: 0 auto;
       }
-              /* Gaya untuk checkbox */
-             
-              
-              /* Gaya untuk hasil tes */
-              #hasil {
-                text-align: center;
-                margin-top: 20px;
-              }
-              
-              #skor {
-                font-size: 24px;
-                font-weight: bold;
-              }
-              
-              /* Tambahan: Animasi untuk elemen saat muncul */
-              @keyframes fadeIn {
-                from {
-                  opacity: 0;
-                }
-                to {
-                  opacity: 1;
-                }
-              }
-              
-              .fadeIn {
-                animation: fadeIn 0.5s ease-in-out;
-              }
-              /* CSS untuk hasil tes */
-              #hasil {
+
+      h2 {
+        margin-top: 0;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      section {
+        margin-top: 20px;
+        /* Atur margin atas */
+        margin-bottom: 20px;
+        /* Atur margin bawah */
+      }
+
+      /* Gaya untuk tombol "Lanjutkan Tes" */
+     /* CSS untuk pertanyaan */
+.pertanyaan {
+  padding: 15px; /* Menambahkan padding 15px pada semua sisi elemen dengan kelas "pertanyaan" */
+  margin-bottom: 20px; /* Memberikan margin di bagian bawah setiap elemen pertanyaan */
+}
+
+/* Untuk elemen dengan ID yang dimulai dengan "pertanyaan" */
+
+
+/* Rapikan padding pada tombol "Lanjutkan Tes" */
+button {
+  padding: 9px 10px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* Animasi perubahan warna latar belakang */
+}
+
+button:hover {
+  background-color: #2980b9;
+  padding: 9px 10px; /* Kembalikan padding ke nilai semula saat tombol dihover */
+}
+
+      .jenisKelaminDropdown {
+        width: 100%;
+        padding: 1px;
+        margin-bottom: 23px;
+        /* Atur jarak antara dropdown dan tombol */
+        border: 1px solid;
+        /* Menambahkan jenis border */
+        border-radius: 4px;
+        line-height: 1.5;
+        /* Menyesuaikan line-height */
+      }
+
+
+      #kuesioner {
+        display: none;
+        padding: 13px;
+       
+      }
+
+      /* Gaya untuk checkbox */
+
+
+      /* Gaya untuk hasil tes */
+      #hasil {
+        display: none;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+      }
+
+      #skor {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      /* Tambahan: Animasi untuk elemen saat muncul */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+    
+      .fadeIn {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      /* CSS untuk hasil tes */
+      #hasil {
   display: none;
   text-align: center;
   margin-top: 0px;
@@ -233,14 +267,13 @@
 }
 
 
-              fieldset fieldset {
-                  display: none;
-                }
-                /* Add margin-bottom to the Jenis Kelamin dropdown */
-           
+      fieldset fieldset {
+        display: none;
+      }
+      button[type="button"] {
+  padding: 10px 30px; /* Sesuaikan nilai padding sesuai kebutuhan Anda */
+}
 
-
-            
             </style>
             <div class="container">
               <div id="biodataForm">
@@ -261,7 +294,7 @@
             </div>
             
                 <div id="kuesioner" style="display: none;">
-                  <h2>Kuesioner FAM E-HEALTH SCREENING</h2>
+                  <h2>Kuesioner Insomnia</h2>
                   <form id="quizForm">
                     <!-- Pertanyaan 1 -->
                     <div id="pertanyaan1">
@@ -491,40 +524,44 @@
             
               document.getElementById('skor').innerText = skor.toFixed(2);
             
-              const keteranganElem = document.getElementById('keterangan');
+             
+             
               let keterangan = '';
-              let rekomendasi = '';
-              if (skor >= 76) {
-  keterangan = 'Hasil dari pertanyaan menunjukkan kemungkinan terjadinya insomnia kronis.';
-  keterangan += 'Fokus utama dari pengobatan adalah identifikasi faktor penyebab.';
-  keterangan += 'Setelah faktor penyebab teridentifikasi, penting untuk mengontrol dan mengelola masalah yang mendasarinya.';
-  keterangan += 'Sleep hygiene adalah komponen terapi perilaku untuk insomnia. Langkah-langkah termasuk mencuci muka, sikat gigi, buang air kecil sebelum tidur, tidur sebanyak yang dibutuhkan, berolahraga secara rutin, idealnya 4-5 jam sebelum tidur.';
-  keterangan += 'Hindari memaksa diri untuk tidur, serta hindari caffeine, alkohol, dan nikotin 6 jam sebelum tidur. Juga, hindari kegiatan lain yang tidak ada kaitannya dengan tidur kecuali hanya untuk sex dan tidur.';
+// Deklarasi variabel keterangan untuk menghindari masalah di luar blok if-else
+
+if (skor >= 76) {
+  keterangan = 'Hasil dari pertanyaan menunjukkan kemungkinan terjadinya insomnia kronis. ';
+  keterangan += 'Fokus utama dari pengobatan adalah identifikasi faktor penyebab. ';
+  keterangan += 'Setelah faktor penyebab teridentifikasi, penting untuk mengontrol dan mengelola masalah yang mendasarinya. ';
+  keterangan += 'Sleep hygiene adalah komponen terapi perilaku untuk insomnia. Langkah-langkah termasuk mencuci muka, sikat gigi, buang air kecil sebelum tidur, tidur sebanyak yang dibutuhkan, berolahraga secara rutin, idealnya 4-5 jam sebelum tidur. ';
+  keterangan += 'Hindari memaksa diri untuk tidur, serta hindari caffeine, alkohol, dan nikotin 6 jam sebelum tidur. Juga, hindari kegiatan lain yang tidak ada kaitannya dengan tidur kecuali hanya untuk sex dan tidur. ';
   keterangan += 'Relaxation therapy meliputi relaksasi otot progresif, latihan pernafasan dalam, serta meditasi. Ini membantu mengenali dan mengendalikan ketegangan dengan melakukan serangkaian latihan, termasuk menghirup dan menghembuskan nafas secara perlahan-lahan.';
 } else {
-    keterangan = 'Berdasarkan tingkat pemahaman Anda, dapat disimpulkan bahwa Anda tidak mengalami insomnia Kronis.';
-    rekomendasi = `Berdasarkan diagnosa yang telah didapatkan, Anda tidak mengalami INSOMNIA. Namun beberapa hal yang dapat Anda lakukan untuk mencegah penyakit INSOMNIA di antaranya:<br>
-    1. Tentukan waktu tidur Anda<br>
-    2. Hindari menggunakan smartphone, tablet, televisi, atau layar LCD lainnya sebelum tidur.<br>
-    3. Hindari konsumsi kafein, alkohol, dan nikotin.<br>
-    4. Olahraga secara teratur.<br>
-    5. Lakukan rutinitas santai sebelum tidur, seperti membaca buku, mendengarkan musik, atau mandi.<br>
-    6. Buatlah kamar tidur Anda senyaman mungkin.<br>
-    Semoga Membantu :)`;
-  }
 
+keterangan += '<p>Berdasarkan diagnosa yang telah didapatkan, Anda tidak mengalami INSOMNIA KRONIS. Namun beberapa hal yang dapat Anda lakukan untuk mencegah penyakit INSOMNIA di antaranya:</p>';
+keterangan += '<ol>'; // Menggunakan tag <ol> (Ordered List) agar urutannya berdasarkan angka
+keterangan += '<li>Tentukan waktu tidur Anda</li>';
+keterangan += '<li>Hindari menggunakan smartphone, tablet, televisi, atau layar LCD lainnya sebelum tidur.</li>';
+keterangan += '<li>Hindari konsumsi kafein, alkohol, dan nikotin.</li>';
+keterangan += '<li>Olahraga secara teratur.</li>';
+keterangan += '<li>Lakukan rutinitas santai sebelum tidur, seperti membaca buku, mendengarkan musik, atau mandi.</li>';
+keterangan += '<li>Buatlah kamar tidur Anda senyaman mungkin.</li>';
+keterangan += '</ol>'; // Tutup tag <ol>
+keterangan += '<p>Semoga Membantu :)</p>';
+}
 
+// Setelah mengisi keterangan, Anda bisa menggunakan atau menampilkan nilainya di tempat yang sesuai dalam kode Anda.
 
+const rekomendasi = ''; // Pastikan rekomendasi sudah terdefinisi sesuai kebutuhan Anda
+const hasilKeterangan = keterangan + rekomendasi;
 
-            
-            
-            
-              keteranganElem.innerText = keterangan;
-            
-              document.getElementById('keterangan').innerHTML = rekomendasi;
-              document.getElementById('kuesioner').style.display = 'none';
-              document.getElementById('hasil').style.display = 'block';
+const keteranganElem = document.getElementById('keterangan');
+keteranganElem.innerHTML = hasilKeterangan;
+
+document.getElementById('kuesioner').style.display = 'none';
+document.getElementById('hasil').style.display = 'block';
             }
+
             function getJenisKelamin() {
   const jenisKelaminRadios = document.getElementsByName('jenisKelamin');
   let selectedValue = '';
